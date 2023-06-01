@@ -1,11 +1,3 @@
-const eqArrays = function(firstArr, secondArr) {
-  let result = (firstArr.length === secondArr.length);
-  for (let i = 0; i < firstArr.length; i++) {
-    result = result && (firstArr[i] === secondArr[i]);
-  }
-  return result;
-};
-
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -16,6 +8,7 @@ const assertEqual = function(actual, expected) {
 
 const countKeys = function(object) {
   let count = 0;
+  // eslint-disable-next-line no-unused-vars
   for (const _ in object) {
     count++;
   }
