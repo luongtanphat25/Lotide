@@ -1,13 +1,13 @@
+const eqArrays = require('../eqArrays.js');
 const tail = require('../tail.js');
-const assertEqual = require('../assertEqual.js');
+const assert = require('chai').assert;
 
-// Test Case 1: Check the returned array elements
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2);
-assertEqual(result[0], "Lighthouse");
-assertEqual(result[1], "Labs");
+describe("#tail", () => {
+  it('retunrs ["Lighthouse", "Labs"] for ["Hello", "Lighthouse", "Labs"]', () => {
+    assert.isTrue(eqArrays(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]));
+  });
 
-// Test Case: Check the original array
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual(words.length, 3);
+  it('retunrs ["Labs"] for ["Lighthouse", "Labs"]', () => {
+    assert.isTrue(eqArrays(tail(["Lighthouse", "Labs"]), ["Labs"]));
+  });
+});
