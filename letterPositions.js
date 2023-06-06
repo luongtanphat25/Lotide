@@ -14,9 +14,3 @@ const letterPositions = function(sentence) {
 };
 
 module.exports = letterPositions;
-
-// let result = letterPositions("helloeo");
-// assertArraysEqual(result["h"], [0]);
-// assertArraysEqual(result["e"], [1, 5]);
-// assertArraysEqual(result["l"], [2, 3]);
-// assertArraysEqual(result["o"], [4, 6]);
