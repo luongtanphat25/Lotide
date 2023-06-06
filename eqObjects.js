@@ -1,11 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const countKeys = function(object) {
   let count = 0;
   // eslint-disable-next-line no-unused-vars
@@ -22,10 +14,4 @@ const eqObjects = function(object1, object2) {
   }
   return result;
 };
-
-const shirtObject = { color: "red", size: "medium" };
-const anotherShirtObject = { size: "medium", color: "red" };
-const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
-
-assertEqual(eqObjects(shirtObject , anotherShirtObject), true);
-assertEqual(eqObjects(shirtObject , longSleeveShirtObject), false);
+module.exports = eqObjects;
